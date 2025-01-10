@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профиль</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #f0f8ff;
+            color: #2c3e50;
+            line-height: 1.5;
+            margin: 20px;
+        }
+        .profile-card {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #34495e;
+        }
+        .profile-info p {
+            margin: 10px 0;
+        }
+        strong {
+            color: #2c3e50;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background: #2980b9;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-radius: 5px;
+        }
+        a:hover {
+            background: #1f6391;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <h1>Профиль</h1>
+        <div class="profile-info">
+            <p><strong>ID:</strong> {{ user.id }}</p>
+            <p><strong>Логин:</strong> {{ user.login_name }}</p>
+            <p><strong>Email:</strong> {{ user.email_address }}</p>
+            <p><strong>Имя:</strong> {{ user.first_name }}</p>
+            <p><strong>Фамилия:</strong> {{ user.last_name }}</p>
+            <p><strong>Дата регистрации:</strong> {{ user.created_at }}</p>
+        </div>
+        <a href="/users/">← Назад</a>
+    </div>
+</body>
+</html>
